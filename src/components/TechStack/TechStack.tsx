@@ -92,7 +92,7 @@ export default function TechStack({ setShowConnectPage }: TechStackProps) {
             </button>
 
             <a
-              href="/resume.pdf"
+              href={`${import.meta.env.BASE_URL}resume.pdf`}
               download="Arjun_Gawande_Resume.pdf"
               className="flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-[#0a0f1c] px-4 py-3 text-sm font-medium text-slate-300 hover:bg-white/10 hover:text-white transition duration-300 border-cyan-500/20 hover:border-cyan-400/50 cursor-pointer"
             >
