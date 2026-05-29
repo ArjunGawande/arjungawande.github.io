@@ -32,16 +32,7 @@ function App() {
     setFormStatus("submitting");
 
     // Access Key placeholder - user can replace it with their key from web3forms.com
-    const accessKey = "YOUR_ACCESS_KEY_HERE";
-
-    if (accessKey === "YOUR_ACCESS_KEY_HERE") {
-      // Simulate submission successfully for seamless local testing
-      setTimeout(() => {
-        setFormStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      }, 1000);
-      return;
-    }
+    const accessKey = "bfc242ec-1e10-4904-b522-04eb11ca59b1";
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
