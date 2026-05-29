@@ -13,7 +13,7 @@ export default function About() {
       </div>
 
       {/* Elegant Introductory Copy */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-12 w-full text-slate-300">
+      {/* <div className="grid grid-cols-1 gap-8 md:grid-cols-12 w-full text-slate-300">
         <div className="md:col-span-5 flex flex-col justify-center">
           <p className="text-xl font-medium text-white leading-relaxed">
             Building premium, scalable web experiences driven by <span className="text-cyan-400 font-semibold">first-principles thinking</span> and modern architectural patterns.
@@ -27,7 +27,7 @@ export default function About() {
             I believe that great software is built with intention—secure by design, highly optimized for performance, and engineered to grow. I'm dedicated to continuous learning, active developer advocacy, and pushing the boundaries of what is possible with cloud computing and AI.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Inner: THIS is the positioning context for card-swap-container */}
       <div className="w-full mt-6" style={{ position: "relative", height: "420px", overflow: "hidden" }}>

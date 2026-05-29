@@ -239,9 +239,27 @@ export default function Projects() {
               <h3 className="mb-2 text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                 MCQ Quiz platform
               </h3>
-              <p className="mb-4 text-[13px] leading-relaxed text-slate-400 text-left">
-                A modern, interactive MCQ Quiz platform that allows users to test their knowledge across diverse topics. Features include a dynamic question timer, real-time score tracking, immediate performance feedback, comprehensive post-quiz analytics, and an elegant dashboard. Built to deliver a fast, fully responsive, and highly engaging learning experience.
-              </p>
+              <div className="mb-4 text-[13px] leading-relaxed text-slate-400 text-left space-y-2">
+                <p>
+                  An interactive MCQ platform built for high-concurrency competitive tests, featuring:
+                </p>
+                <ul className="list-disc pl-4 space-y-1">
+                  <li><strong>Unlimited MCQs</strong> – Keep solving as long as the clock is ticking!</li>
+                  <li><strong>30-minute challenge</strong> – Test speed and accuracy under pressure.</li>
+                  <li>
+                    <strong>Lifelines for an Edge:</strong>
+                    <ul className="list-[circle] pl-4 mt-0.5 space-y-0.5">
+                      <li><strong>50-50</strong> – Eliminate two wrong answers.</li>
+                      <li><strong>Gamble</strong> – Get double points if correct, but lose points if wrong.</li>
+                      <li><strong>Double Dip</strong> – Take two shots for the right answer!</li>
+                    </ul>
+                  </li>
+                  {/* <li><strong>Live Leaderboard</strong> – Track current rank in real-time, categorized into Junior & Senior sections.</li> */}
+                </ul>
+                {/* <p className="pt-1 text-slate-300 font-medium">
+                  With 100+ participants, the platform handled traffic seamlessly, ensuring a smooth and engaging experience.
+                </p> */}
+              </div>
             </div>
 
             <div className="mt-auto flex items-center justify-between px-2">
