@@ -16,7 +16,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experience/Experience";
 import TechStack from "./components/TechStack/TechStack";
-import heroImg from "./assets/hero/hero.png";
+
 
 
 function App() {
@@ -250,16 +250,15 @@ function App() {
         ) : (
           <>
             {/* HERO SECTION */}
-            <section id="home" className="relative flex h-screen w-full max-w-6xl flex-col items-center justify-center pt-16 md:flex-row md:justify-between md:pt-0">
+            <section id="home" className="relative flex min-h-screen w-full max-w-6xl flex-col items-center justify-center pt-20 px-6 md:flex-row md:justify-between md:pt-0 gap-8 md:gap-12">
 
-              {/* LEFT COLUMN: Text Only */}
-              <div className="z-10 flex w-full flex-col items-start md:w-1/2">
-
-                <span className="ml-2 text-sm uppercase tracking-[0.3em] text-slate-400">
+              {/* LEFT COLUMN: Text and Content */}
+              <div className="z-10 flex w-full flex-col items-start justify-center md:w-[60%]">
+                <span className="ml-1 text-xs sm:text-sm uppercase tracking-[0.4em] text-slate-400/80 mb-3 block font-semibold animate-pulse">
                   Hello, I'm
                 </span>
 
-                <div className="mt-2 text-5xl font-bold tracking-tighter md:text-7xl lg:text-8xl">
+                <h1 className="text-3xl font-extrabold tracking-tighter sm:text-5xl md:text-4xl lg:text-6xl xl:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-white via-slate-100 to-slate-400 select-none pb-2 whitespace-nowrap">
                   <DecryptedText
                     text="ARJUN GAWANDE"
                     speed={170}
@@ -268,13 +267,14 @@ function App() {
                     revealDirection="start"
                     useOriginalCharsOnly={false}
                     characters="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*"
-                    className="revealed"
+                    className="revealed inline-block"
                     parentClassName="all-letters"
                     animateOn="view"
+                    style={{ whiteSpace: 'pre', display: 'inline-block' }}
                   />
-                </div>
+                </h1>
 
-                <div className="mt-4 text-lg font-medium text-cyan-400 md:text-xl">
+                <div className="mt-4 text-lg sm:text-xl font-semibold text-cyan-400 md:text-xl lg:text-2xl min-h-[40px] drop-shadow-[0_0_10px_rgba(34,211,238,0.3)]">
                   <TextType
                     text={[
                       "Full-Stack Web Engineer",
@@ -288,16 +288,66 @@ function App() {
                     deletingSpeed={50}
                   />
                 </div>
+
+
               </div>
 
-              {/* RIGHT COLUMN: The Visual Anchor */}
-              <div className="relative z-10 hidden w-full justify-end md:flex md:w-1/2">
-                <div className="h-[450px] w-[350px] overflow-hidden rounded-2xl border border-indigo-500/20 bg-indigo-950/20 backdrop-blur-sm shadow-[0_0_40px_rgba(79,70,229,0.1)] group">
-                  <img
-                    src={heroImg}
-                    alt="Arjun Gawande"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+              {/* RIGHT COLUMN: Mock Developer Console (JSON) */}
+              <div className="z-10 w-full md:w-[38%] max-w-lg md:ml-auto">
+                <div className="relative w-full rounded-xl border border-white/10 bg-[#070514]/65 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.6)] overflow-hidden font-mono text-xs md:text-sm select-none">
+                  {/* Terminal Header */}
+                  <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-[#0a081e]/90">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-3 h-3 rounded-full bg-red-500/80 shadow-[0_0_8px_rgba(239,68,68,0.3)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-yellow-500/80 shadow-[0_0_8px_rgba(234,179,8,0.3)]"></span>
+                      <span className="w-3 h-3 rounded-full bg-green-500/80 shadow-[0_0_8px_rgba(34,197,94,0.3)]"></span>
+                    </div>
+                    <span className="text-slate-400 text-xs font-semibold select-none">profile.json</span>
+                    <span className="text-slate-500 text-xs">utf-8</span>
+                  </div>
+
+                  {/* Terminal Content (JSON) */}
+                  <div className="p-5 md:p-6 space-y-1 text-slate-300 leading-relaxed overflow-x-auto">
+                    <div>
+                      <span className="text-pink-400">{"{"}</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"name"</span>: <span className="text-emerald-400">"Arjun Gawande"</span>,
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"role"</span>: <span className="text-emerald-400">"Full-Stack Web Engineer"</span>,
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"location"</span>: <span className="text-emerald-400">"India"</span>,
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"specialties"</span>: <span className="text-pink-400">{"["}</span>
+                    </div>
+                    <div className="pl-8">
+                      <span className="text-emerald-400">"Web Apps"</span>,
+                    </div>
+                    <div className="pl-8">
+                      <span className="text-emerald-400">"Cloud Infrastructure"</span>,
+                    </div>
+                    <div className="pl-8">
+                      <span className="text-emerald-400">"GenAI & RAG"</span>
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-pink-400">{"]"}</span>,
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"status"</span>: <span className="text-emerald-400">"Deploying Ideas"</span>,
+                    </div>
+                    <div className="pl-4">
+                      <span className="text-cyan-400">"interests"</span>: <span className="text-pink-400">{"["}</span>
+                      <span className="text-emerald-400">"Clean Code"</span>, <span className="text-emerald-400">"Design"</span>
+                      <span className="text-pink-400">{"]"}</span>
+                    </div>
+                    <div>
+                      <span className="text-pink-400">{"}"}</span>
+                      <span className="inline-block w-1.5 h-3.5 bg-cyan-400 ml-1 animate-pulse align-middle"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -309,7 +359,6 @@ function App() {
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
               </a>
-
             </section>
 
             <TechStack setShowConnectPage={setShowConnectPage} />
